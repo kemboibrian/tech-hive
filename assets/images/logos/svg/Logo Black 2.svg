@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 391.34">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #ffb303;
+      }
+
+      .cls-2 {
+        font-family: GillSansMT-Italic, 'Gill Sans MT';
+        font-size: 54.17px;
+        font-style: italic;
+      }
+
+      .cls-3 {
+        font-family: GillSansMT-Bold, 'Gill Sans MT';
+        font-size: 109.93px;
+        font-weight: 700;
+      }
+
+      .cls-4 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-5 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.19em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g>
+        <polygon class="cls-1" points="294.66 84.05 294.66 28.02 246.13 0 197.61 28.02 197.61 84.05 246.13 112.07 294.66 84.05"/>
+        <polygon class="cls-1" points="351 181.94 351 125.91 302.47 97.9 253.95 125.91 253.95 181.94 302.47 209.96 351 181.94"/>
+        <polygon class="cls-1" points="238.05 181.94 238.05 125.91 189.53 97.9 141 125.91 141 181.94 189.53 209.96 238.05 181.94"/>
+      </g>
+      <g>
+        <text class="cls-3" transform="translate(0 316.53)"><tspan class="cls-6" x="0" y="0">T</tspan><tspan class="cls-4" x="58.29" y="0">ech-Hi</tspan><tspan class="cls-5" x="380.14" y="0">v</tspan><tspan class="cls-4" x="431.34" y="0">e</tspan></text>
+        <text class="cls-2" transform="translate(90.31 376.16)"><tspan x="0" y="0">Digital Solutions</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
