@@ -12869,7 +12869,8 @@ blockquote .blockquote-footer:before {
 
 @media (min-width: 1400px) { /* Applies only to extra-large screens (xxl and larger) */
   .col-xxl-7 {
-      padding-right: 235px;
+      padding-right:195px;
+       margin-left: -295px;
   }
 }
 
