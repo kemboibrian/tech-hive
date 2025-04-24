@@ -176,35 +176,32 @@
                     </div>
                     <div class="col-lg-6">
                        <div class="contact-form style-three bgc-lighter z-1 rel">
-                            <form id="contactForm" class="contactForm" name="contactForm" action="https://wa.me/0715699966?text=" method="get" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="50">
+                            <form id="contactForm" class="contactForm" name="contactForm" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="50">
     <h3>Get In Touch</h3>
     <p>Fill out the form below, and we'll be in touch shortly</p>
     <div class="row gap-20 mt-20">
         <div class="col-sm-6">
             <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" class="form-control" placeholder="Full name" value="" required data-error="Please enter your Name">
-                <div class="help-block with-errors"></div>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Full name" required>
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group">
                 <label for="phone_number">Phone</label>
-                <input type="text" id="phone_number" name="phone_number" class="form-control" placeholder="Phone number" value="" required data-error="Please enter your Number">
-                <div class="help-block with-errors"></div>
+                <input type="text" id="phone_number" name="phone_number" class="form-control" placeholder="Phone number" required>
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Email" value="" required data-error="Please enter your Email">
-                <div class="help-block with-errors"></div>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
             </div>
         </div>
         <div class="col-sm-6 mb-25">
             <div class="form-group">
                 <label for="subject">Service</label>
-                <select id="subject" name="subject" class="form-control" required data-error="Please select a subject">
+                <select id="subject" name="subject" class="form-control" required>
                     <option value="" disabled selected>Choose a Service</option>
                     <option value="Web Development">Web Development</option>
                     <option value="Digital Product Design & Branding">Digital Product Design & Branding</option>
@@ -213,15 +210,12 @@
                     <option value="Content Creation & Management">Content Creation & Management</option>
                     <option value="Web Hosting">Web Hosting</option>
                 </select>
-                <div class="help-block with-errors"></div>
             </div>
         </div>
-
         <div class="col-sm-12">
             <div class="form-group">
                 <label for="message">Your Message</label>
-                <textarea name="message" id="message" class="form-control" rows="4" placeholder="Write your message here" required data-error="Please enter your Message"></textarea>
-                <div class="help-block with-errors"></div>
+                <textarea name="message" id="message" class="form-control" rows="4" placeholder="Write your message here" required></textarea>
             </div>
         </div>
         <div class="col-sm-12">
@@ -229,11 +223,11 @@
                 <button type="submit" class="theme-btn" data-hover="Send Message">
                     <span>Send Message</span>
                 </button>
-                <div id="msgSubmit" class="hidden"></div>
             </div>
         </div>
     </div>
 </form>
+
                        </div>
                     </div>
                 </div>
@@ -387,22 +381,22 @@
     <script src="assets/js/form-validator.min.js"></script>
     <script src="assets/js/contact-form-script.js"></script>
     <script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevent form from submitting
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Stop normal form submission
 
-        // Gather form values
-        const name = document.getElementById('name').value;
-        const phone = document.getElementById('phone_number').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone_number').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value.trim();
 
-        // Construct the WhatsApp message
-        const text = `Hello, I'm interested in the service: ${subject}.%0A%0AName: ${name}%0APhone: ${phone}%0AEmail: ${email}%0AMessage: ${message}`;
+    const text = `Hello, I'm interested in the service: ${subject}.\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nMessage: ${message}`;
+    const encodedText = encodeURIComponent(text);
+    const whatsappLink = `https://wa.me/254715699966?text=${encodedText}`;
 
-        // Redirect to WhatsApp with the message
-        window.location.href = `https://wa.me/0715699966?text=${text}`;
-    });
+    window.open(whatsappLink, "_blank");
+});
 </script>
+
 </body>
 </html>
